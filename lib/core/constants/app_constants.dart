@@ -23,12 +23,36 @@ abstract final class AppConstants {
   static const String dashboardCachePreferenceKey = 'dashboard_cache_v1';
 
   static const String googleSheetId = String.fromEnvironment('GOOGLE_SHEET_ID');
+  static const int masterDataSheetGid = int.fromEnvironment(
+    'MASTER_DATA_SHEET_GID',
+    defaultValue: -1,
+  );
+  static const int masterLcSheetGid = int.fromEnvironment(
+    'MASTER_LC_SHEET_GID',
+    defaultValue: -1,
+  );
   static const int poSheetGid = int.fromEnvironment(
     'PO_SHEET_GID',
     defaultValue: -1,
   );
   static const int productionSheetGid = int.fromEnvironment(
     'PRODUCTION_SHEET_GID',
+    defaultValue: -1,
+  );
+  static const int cuttingSheetGid = int.fromEnvironment(
+    'CUTTING_SHEET_GID',
+    defaultValue: -1,
+  );
+  static const int sewingSheetGid = int.fromEnvironment(
+    'SEWING_SHEET_GID',
+    defaultValue: -1,
+  );
+  static const int issueSheetGid = int.fromEnvironment(
+    'ISSUE_SHEET_GID',
+    defaultValue: -1,
+  );
+  static const int exportSheetGid = int.fromEnvironment(
+    'EXPORT_SHEET_GID',
     defaultValue: -1,
   );
   static const int stockSheetGid = int.fromEnvironment(
