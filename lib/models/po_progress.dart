@@ -58,7 +58,7 @@ class POProgress {
     return List.unmodifiable(issues);
   }
 
-  /// Serializes this PO and its size variants for offline storage.
+  /// Serializes this PO and its production variants for offline storage.
   Map<String, Object?> toJson() => {
         'poNo': poNo,
         'brand': brand,
@@ -67,7 +67,7 @@ class POProgress {
         'variants': variants.map((variant) => variant.toJson()).toList(),
       };
 
-  /// Restores a PO and its size variants from persisted JSON.
+  /// Restores a PO and its production variants from persisted JSON.
   factory POProgress.fromJson(Map<String, dynamic> json) => POProgress(
         poNo: json['poNo'] as String,
         brand: json['brand'] as String,
