@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/constants/app_constants.dart';
 import 'core/theme/app_theme.dart';
+import 'cutting/cutting_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,6 +39,20 @@ class _SetupHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text(AppConstants.appName)),
+      drawer: Drawer(
+        child: ListView(children: [
+          const DrawerHeader(child: Center(child: Text(AppConstants.appName))),
+          ListTile(
+            leading: const Icon(Icons.content_cut),
+            title: const Text('Cutting'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute<void>(builder: (_) => const CuttingPage()));
+            },
+          ),
+        ]),
+      ),
       body: const Center(
         child: Padding(
           padding: EdgeInsets.all(24),
